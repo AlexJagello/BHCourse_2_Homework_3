@@ -47,8 +47,8 @@ class NLPBot:
         
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
-        if prob.item() > 0.05:
+        if prob.item() > 0.01:
             for intent in self.intents['intents']:
                 if tag == intent["tag"]:
-                    return random.choice(intent['responses']) + "\n" + prob.item().__str__()
-        else: return None 
+                    return random.choice(intent['responses']),  prob
+        else: return None , -1
