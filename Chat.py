@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(filename='myapp.log', level=logging.INFO)
 logger.info('Started')
 
-bot = telebot.TeleBot('7006022839:AAEnf2iClBJwQNqFty5IvFoegTaSwOK2-OY')
+bot = telebot.TeleBot('secret code')
 
 chat_bot = NLPbot.NLPBot()
 
